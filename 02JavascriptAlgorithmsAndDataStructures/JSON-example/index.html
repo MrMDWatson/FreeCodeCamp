@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Retrieve Data</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="http://d3js.org/d3.v5.min.js"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Cat Photo Finder</h1>
+        <p class="message box">The message will go here</p>
+        <button id="getMessage">
+            <p>Get Message</p>
+        </button>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                document.getElementById("getMessage").onclick = function(){
+                    /*
+                    fetch('/json/cats.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('message').innerHTML = JSON.stringify(data);
+                        })
+                    */
+                    var req = new XMLHttpRequest();
+                    req.open("GET", "/json/cats.json", true);
+                    req.send();
+                    req.onload = function(){
+                        var json = JSON.parse(responseText);
+                        document.getElementsByClassName("message")[0].innerHTML = JSON.stringify(json);
+                        json.forEach(function(val) {
+
+                            // Adding each object keys
+                            var keys = Object.keys(val);
+                            // Generating new html
+                            html += "<div class = 'cat'>";
+                            // Adding the custom html to each key
+                            keys.map(function(key) {
+                                html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+                            });
+                            html += "</div><br>";
+                        });
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>

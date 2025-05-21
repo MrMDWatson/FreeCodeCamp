@@ -1,0 +1,39 @@
+@media (max-width: 500px) {
+  html {
+    width: 358px;
+  }
+}
+
+.container {
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  text-align: center;
+  margin: 5px 20px 5px 0px;
+}
+
+#navbar > a {
+  margin: 5px auto;
+  color: black;
+}
+
+#main-doc {
+  padding: 20px;
+  height: fit-content;
+  border-left: 3px solid black;
+}
+
+h1 {
+  margin: 5px auto;
+}
+
+a {
+  margin: 0 10px;
+}

@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  background: white;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  background-color: cornflowerblue;
+  margin: 0;
+  padding: 2px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: blanchedalmond;
+  margin : 0;
+}
+
+p {
+  font-size: 12;
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.App {
+  margin: 0;
+  padding: 10px;
+  background: purple;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: yellow;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.title > img {
+  margin-right: 5px;
+  height: 5vh;
+}
+
+.nav-bar {
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  padding: 5px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  max-width: 20vw;
+  height: fit-content;
+}
+
+.main {
+  background: red;
+  padding: 5px;
+  width: 100%;
+}
+
+.footer {
+  background: orange;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.more {
+  background-color: #555555;
+  padding: 3px;
+}
+
+.display {
+  background-color: black;
+  color: aliceblue;
+}

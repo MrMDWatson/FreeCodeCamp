@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+
+#Chart {
+    margin-bottom: 20px;
+}
+
+
+.bar {
+    border: 1px solid black;
+}
+
+.cell:hover {
+    fill: black;
+}
+
+#tooltip {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+    font: 12px;
+    color: white;
+    background-color: rgb(46, 62, 82);
+    pointer-events: none;
+}
+
+#legend {
+    color: gray;
+    text-shadow: 0 0 10px black;
+}

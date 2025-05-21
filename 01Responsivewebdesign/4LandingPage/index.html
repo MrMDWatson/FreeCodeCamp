@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <img 
+          src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          id="header-img"
+          alt="Kitty Pic"
+          class="header-logo"
+        />
+        <a href="#Home" class="nav-link"><h1 class="header-title">Landing Page</h1></a>
+        <nav id="nav-bar">
+          <a href="#Signup" class="nav-link">Sign Up</a>
+          <a href="#About" class="nav-link">About</a>
+        </nav>
+      </header>
+      <main>
+        <section id="Home" class="section-top">
+          <iframe id="video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          </iframe>
+        </section>
+        <section id="Signup" class="section-middle">
+          <form 
+            id="form"
+            method="post"
+            action="https://www.freecodecamp.com/email-submit"
+          >
+            <div>
+              <label for="email">Email: </label>
+              <input name="email" id="email" type="email" placeholder="Email"/>
+            </div>
+            <input id="submit" type="submit"/>
+          </form>
+        </section>
+        <section id="About" class="section-bottom">
+          <h2>SIGN UP NOW</h2>
+          <h3>Booze</h3>
+          <p>All you can drink, when you wanna drink</p>
+          <h3>Cars</h3>
+          <p>The best car shows in the southest</p>
+          <h3>Money</h3>
+          <p>Make sure you bring some</p>
+        </section>
+      </main>
+      <footer id="footer">
+        <h3><a href="https://instagram.com">Instagram</a></h3>
+      </footer>
+    </div>
+  </body>
+</html>

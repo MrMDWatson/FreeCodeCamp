@@ -1,0 +1,28 @@
+#Timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: skyblue;
+    height: 100vh;
+}
+#Top-Controls {
+    display: flex;
+    flex-direction: row;
+}
+#Top-Controls > div {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Session-Controls > div {
+    display: flex;
+    flex-direction: row;
+}
+#Break-Controls > div {
+    display: flex;
+    flex-direction: row;
+}

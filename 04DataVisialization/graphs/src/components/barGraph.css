@@ -1,0 +1,28 @@
+#title {
+  text-align: center;
+}
+
+.bar {
+  fill: red;
+}
+
+.bar:hover {
+  fill: black;
+}
+
+#tooltip {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font: 12px;
+  color: white;
+  background-color: rgb(46, 62, 82);
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+}

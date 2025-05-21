@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+header {
+    border: 2px solid black;
+    padding: 0 10px;
+    background-color: #bea60a;
+    text-align: center;
+}
+main {
+    border: 2px solid black;
+    padding: 0 10px;
+    background-color: #005588;
+}
+section {
+    display: flex;
+}
+
+@media only screen and (max-width: 720px) {
+    .image-wrapper {
+      grid-template-columns: 1fr;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    .text-with-images {
+      grid-template-columns: 1fr;
+    }
+}
+  
+@media only screen and (max-width: 550px) {
+    .hero-title {
+      font-size: 6rem;
+    }
+  }
+
+@media only screen and (max-width: 420px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}

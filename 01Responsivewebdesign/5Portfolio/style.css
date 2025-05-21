@@ -1,0 +1,19 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#welcome-section {
+  height: 100vh;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+}
+@media only screen and (max-width: 420px) {
+  #header {
+    background-color: green;
+  }
+}

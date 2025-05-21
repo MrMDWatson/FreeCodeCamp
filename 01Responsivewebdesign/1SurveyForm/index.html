@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">LaunchPad</h1>
+    <p id="description">Online Game Registration</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name-label">Name: 
+          <input id="name" name="name" type="text" placeholder="Name" required/>
+        </label> 
+        <label id="email-label" for="email-label">Email:  
+          <input id="email" name="email" type="email" placeholder="Email" required/>
+        </label>
+        <label id="number-label" for="number-label">Age: 
+          <input id="number" name="age" type="number" min="1" max="100" placeholder="Age"/>
+        </label>
+        <label for="dropdown">Genger: 
+          <select id="dropdown">
+            <option>(Choose one)</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="playstation">Playstation <input id="playstation" name="choice" value="playstation" type="radio"/></label>
+        <label for="xbox">XBOX <input id="xbox" name="choice" value="xbox" type="radio"/></label>
+        <label for="xbox">PC <input id="pc" name="choice" value="pc" type="radio"/></label>
+        <label for="xbox">MAC <input id="mac" name="choice" value="mac" type="radio"/></label>
+      </fieldset>
+      <fieldset>
+        <legend>Select all that apply.</legend>
+          <label for="action">
+            <input id="action" name="action" value="action" type="checkbox"/> Action
+          </label> 
+          <label for="adventure"> 
+            <input id="adventure" name="adventure" value="adventure" type="checkbox"/> Adventure
+          </label>
+          <label for="rpg">
+            <input id="rpg" name="rpg" value="rpg" type="checkbox"/> RPG
+          </label>
+          <label for="comment">Additional comments?
+            <textarea id="comment" name="comment" placeholder="Comments?" rows="3" cols="30"></textarea>
+          </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

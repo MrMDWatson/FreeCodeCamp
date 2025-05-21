@@ -1,0 +1,48 @@
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: slateblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+#quote-box {
+  padding: 10px 25px;
+  border: 6px double black;
+  background-color: rgb(205, 255, 215);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 280px;
+  height: 30%;
+  min-height: 150px;
+  justify-content: space-evenly;
+}
+
+#quote-box > div {
+  border: 2px double black;
+  background-color: rgb(210, 197, 163);
+  padding: 0 5px;
+}
+
+#quote {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#author {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#quote-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#set-new-quote {
+  display: flex;
+  flex-direction: column;
+}

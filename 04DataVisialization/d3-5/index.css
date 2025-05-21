@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#Chart {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 10px;
+  font: 12px Arial;
+  background: rgba(255, 255, 204, 0.95);
+}
+
+
+
+#legend {
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+tspan {
+  font-size: 5px;
+}

@@ -1,0 +1,51 @@
+body {
+    background-color: yellow;
+  }
+  
+  main {
+    background-color: red;
+    margin: 30px auto;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 30px black;
+  }
+  
+  #title {
+    background-color: black;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 99;
+  }
+  
+  figure {
+    background-color: white;
+    margin-top: 0;
+    color: black;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 89;
+  }
+  
+  img:hover {
+    box-shadow: 0 0 30px black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+    background-color: black;
+  }
