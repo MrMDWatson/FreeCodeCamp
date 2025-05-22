@@ -16,7 +16,7 @@ module.exports = (io) => {
         players[data.id].x = data.x;
         players[data.id].y = data.y;
         players[data.id].score = data.score;
-        socket.broadcast.emit("update", { id: data.id, x: data.x, y: data.y, score: data.score})
+        socket.broadcast.emit("update", { x: data.x, y: data.y, score: data.score, id: data.id })
         if (data.collision) {
           collected += 1;
           speed += (.001 * collected);
@@ -33,4 +33,6 @@ module.exports = (io) => {
     });
   });
   
+
+
 }

@@ -16,6 +16,11 @@ const socketConnection = require("./socket.js");
 
 const helmet = require("helmet");
 
+app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.4.3' }));
+app.use(helmet.xssFilter());
+app.use(helmet.noSniff());
+app.use(helmet.noCache());
+
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/assets', express.static(process.cwd() + '/assets'));
 

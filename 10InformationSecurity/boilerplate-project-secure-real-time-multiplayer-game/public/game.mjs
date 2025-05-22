@@ -16,22 +16,21 @@ socket.on("init", (data) => {
     for (let player in playerArr) {
         console.log("Init players " + player);
         players[player] = new Player({
-            id: playerArr[player].id,
             x: playerArr[player].x,
             y: playerArr[player].y,
-            score: playerArr[player].score
+            score: playerArr[player].score,
+            id: playerArr[player].id
         });
     }
     drawGame();    
 });
 
-
 socket.on("playerJoined", (data) => {
     players[data.id] = new Player({
-        id: data.id,
         x: data.x,
         y: data.y,
-        score: 0
+        score: data.score,
+        id: data.id
     });
     drawGame();
 });
@@ -53,18 +52,22 @@ socket.on("playerLeft", (data) => {
     drawGame();
 });
 
-
 function drawGame() {
+    let playerArr = [];
+    for (const player in players) {
+        playerArr.push(players[player]);
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "20px Arial";
+    ctx.fontStyle = "Green";
+    ctx.fillText(players[socket.id].calculateRank(playerArr), 40, 30);
     ctx.font = "20px Arial";
     ctx.fontStyle = "Green";
     ctx.fillText(players[socket.id].score, 600, 30);
     ctx.fillStyle = "Red";
     ctx.fillRect(collectible.x, collectible.y, 20, 20);
     ctx.fillStyle = "white";
-    for (const player in players) {
-        ctx.fillRect(players[player].x, players[player].y, 20, 20);
-    }
+    playerArr.forEach((player) => ctx.fillRect(player.x, player.y, 20, 20));
 }
 
 function updatePlayer(move) {
@@ -76,7 +79,7 @@ function updatePlayer(move) {
         id: socket.id,
         x: players[socket.id].x,
         y: players[socket.id].y,
-        score: score,
+        score: players[socket.id].score,
         collision: collision
     });
     drawGame();
